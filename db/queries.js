@@ -20,12 +20,13 @@ function getTweeds(req,res) {
 //Takes a JSON object and posts it to the db
 function postTweed(req,res){ 
 db.none('INSERT INTO tweeds(tweed) VALUES($1)', [req.body.tweed])
-    .then((res) => {
+    .then((data) => {
        res.json({
         message: 'ok',
-        tweed: res.body.tweed
+        data: data
        });
    });
   };
     module.exports = { getTweeds:getTweeds,
-                   postTweed:postTweed };
+                       postTweed:postTweed };
+
