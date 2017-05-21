@@ -16,6 +16,8 @@ function getTweeds(req,res) {
     })
   });
 };
+
+//Takes a JSON object and posts it to the db
 function postTweed(req,res){ 
 db.none('INSERT INTO tweeds(tweed) VALUES($1)', [req.body.tweed])
     .then((res) => {
