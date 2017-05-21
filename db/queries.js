@@ -24,7 +24,8 @@ db.none('INSERT INTO tweeds(tweed) VALUES($1)', [req.body.tweed])
        res.json({
         message: 'ok',
         tweed: res.body.tweed
-       })
-   }
+       });
+   });
+  };
     module.exports = { getTweeds:getTweeds,
                    postTweed:postTweed };
