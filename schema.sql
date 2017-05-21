@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS Tweedr;
+CREATE DATABASE Tweedr;
+
+\c Tweedr;
+
+CREATE TABLE IF NOT EXISTS tweeds(
+    id BIGSERIAL PRIMARY KEY,
+    tweed VARCHAR(255)
+);
